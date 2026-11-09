@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-08",
+  "version": "1.3.1",
+  "application": "Electron desktop",
+  "electron": "45.2.3",
+  "electron_builder": "26.18.0",
+  "windows_target": "unpacked folder x64",
+  "startup_transport": "vanhanh-ui custom protocol bound to vanhanh-runtime session; fixed asset allowlist; no HTML file URLs",
+  "unit_tests_passed": 19,
+  "startup_main_smoke_tests_passed": 2,
+  "startup_main_smoke_platform": "Node.js with mocked Electron APIs; main.mjs executed for normal startup and ERR_FAILED splash fallback",
+  "asar": {
+    "version": "1.3.1",
+    "files": 6447,
+    "requiredFiles": true,
+    "currentSourceMatches": true,
+    "noPrivateEnvOrTests": true,
+    "packedBootstrapAssetsRespond": true,
+    "noHtmlFileNavigation": true
+  },
+  "backend_and_renderer_unchanged_from": "1.3.0",
+  "inherited_backend_verification": {
+    "version": "1.3.0",
+    "mysql": "8.0.46",
+    "integration_groups": 42,
+    "integration_test_results_with_parents": 45,
+    "renderer_ui_flows_passed": 6
+  },
+  "main_exe_bytes": 249832448,
+  "main_exe_sha256": "06044561689efcdc0279305053925072cb0809e12e4293c50931e304b4ebcbb8",
+  "main_exe_pe_machine": "0x8664",
+  "limitations": [
+    "Windows GUI has not been executed on a real Windows machine.",
+    "The delivered application must stay with its runtime files and resources folder.",
+    "Unsigned coursework build."
+  ]
+}

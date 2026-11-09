@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Vận Hành – Kết nối MySQL</title>
+    <link rel="stylesheet" href="setup.css" />
+  </head>
+  <body>
+    <main class="setup-shell">
+      <aside class="story">
+        <div class="brand">
+          <img src="../assets/vanhanh.svg" alt="" />
+          <div>Vận Hành<span>.</span><small>ỨNG DỤNG DESKTOP</small></div>
+        </div>
+        <div class="intro">
+          <h1>Sẵn sàng cho <br />những chuyến đi.</h1>
+          <p>
+            Kết nối MySQL một lần, sau đó quản lý đội xe và những hành trình
+            ngay trong ứng dụng.
+          </p>
+          <div class="check">Cửa sổ riêng trên máy tính</div>
+          <div class="check">Giao diện tiếng Việt dễ thao tác</div>
+          <div class="check">Giữ dữ liệu MySQL đang có</div>
+        </div>
+        <small class="story-footer"
+          >PROJECT 5 · QUẢN LÝ VẬN TẢI HÀNH KHÁCH</small
+        >
+      </aside>
+      <section class="settings">
+        <div class="form-wrapper">
+          <h2>Kết nối cơ sở dữ liệu</h2>
+          <p class="description">
+            Dùng thông tin kết nối MySQL mà bạn đã sử dụng trong Workbench.
+          </p>
+          <form id="connection-form">
+            <div class="grid">
+              <label
+                >Máy chủ<input
+                  name="host"
+                  id="host"
+                  value="127.0.0.1"
+                  required
+                  maxlength="253"
+                  autocomplete="off" /></label
+              ><label
+                >Cổng MySQL<input
+                  name="port"
+                  id="port"
+                  type="number"
+                  value="3306"
+                  min="1"
+                  max="65535"
+                  required /></label
+              ><label
+                >Tài khoản MySQL<input
+                  name="user"
+                  id="user"
+                  value="root"
+                  required
+                  maxlength="100"
+                  autocomplete="off" /></label
+              ><label
+                >Mật khẩu MySQL<input
+                  name="password"
+                  id="password"
+                  type="password"
+                  autocomplete="off"
+                  maxlength="1024"
+                  placeholder="Nhập mật khẩu MySQL" /></label
+              ><label class="full"
+                >Tên cơ sở dữ liệu<input
+                  name="database"
+                  id="database"
+                  value="Project5_VanTai"
+                  pattern="[A-Za-z0-9_]{1,64}"
+                  title="Chữ, số và dấu gạch dưới, tối đa 64 ký tự"
+                  required
+              /></label>
+            </div>
+            <p id="password-hint" class="hint">
+              Đây là tài khoản MySQL, khác tài khoản đăng nhập Vận Hành.
+            </p>
+            <label class="check-row"
+              ><input type="checkbox" id="remember" checked /><span
+                >Nhớ mật khẩu an toàn trên máy này</span
+              ></label
+            >
+            <p id="storage-note" class="hint" hidden>
+              Máy chưa có kho khóa bảo mật. Mật khẩu chỉ dùng trong phiên này;
+              ứng dụng sẽ hỏi lại khi mở lần sau.
+            </p>
+            <label class="check-row"
+              ><input type="checkbox" id="initialize" checked /><span
+                >Khởi tạo / nâng cấp cấu trúc CSDL nếu cần</span
+              ></label
+            >
+            <div class="notice">
+              Giữ dữ liệu đang có. Dữ liệu mẫu chỉ được thêm khi cả bốn bảng
+              nghiệp vụ đều trống.
+            </div>
+            <div
+              id="status"
+              class="status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+            <div class="actions">
+              <button type="button" id="back" class="secondary" hidden>
+                Trở lại ứng dụng</button
+              ><button type="button" id="test" class="secondary">
+                Kiểm tra kết nối</button
+              ><button type="submit" id="connect" class="primary">
+                Lưu & mở ứng dụng
+              </button>
+            </div>
+          </form>
+          <p class="footer-note">
+            MySQL Server cần đang chạy trên máy chủ đã chọn. Bạn không cần nhập
+            địa chỉ web hoặc tự khởi động backend.
+          </p>
+          <div class="version">Vận Hành Desktop <span id="version"></span></div>
+        </div>
+      </section>
+    </main>
+    <script src="setup.js"></script>
+  </body>
+</html>

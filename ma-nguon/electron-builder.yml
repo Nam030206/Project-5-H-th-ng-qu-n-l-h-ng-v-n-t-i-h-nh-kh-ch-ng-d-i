@@ -1,0 +1,46 @@
+appId: vn.project5.vanhanh
+productName: VanHanh
+asar: true
+npmRebuild: false
+directories:
+  output: release
+  buildResources: assets
+files:
+  - desktop/**
+  - "!desktop/tests/**"
+  - assets/**
+  - server/**
+  - "!server/tests/**"
+  - database/**
+  - dist/public/**
+  - package.json
+  - "!**/.env*"
+  - "!**/*.log"
+  - "!**/test/**"
+  - "!**/tests/**"
+protocols:
+  - name: VanHanh Trip
+    schemes:
+      - vanhanh
+win:
+  icon: assets/vanhanh.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: VanHanh-Setup-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Vận Hành
+  uninstallDisplayName: Vận Hành
+  installerIcon: assets/vanhanh.ico
+  uninstallerIcon: assets/vanhanh.ico
+  deleteAppDataOnUninstall: false
+  runAfterFinish: true
+linux:
+  icon: assets/vanhanh.png
+  target: AppImage

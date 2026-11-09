@@ -1,0 +1,19 @@
+VẬN HÀNH DESKTOP 1.3.1 – WINDOWS X64
+
+1. Đóng bản ứng dụng cũ và hộp thoại báo lỗi nếu đang mở.
+2. Giải nén TOÀN BỘ tệp ZIP vào một thư mục mới.
+3. Mở VanHanh_Desktop/VanHanh.exe trong thư mục đã giải nén.
+4. Giữ nguyên các tệp .dll, resources, locales và toàn bộ tệp đi kèm cạnh VanHanh.exe. Không di chuyển riêng tệp .exe.
+5. Bật MySQL Server. Nhập thông tin kết nối như đã dùng với Workbench nếu app yêu cầu.
+6. Tiếp tục dùng CSDL và tài khoản hiện có. Bản này giữ chức năng Hành khách, đăng ký/hủy chỗ, quản lý xe, nhân sự và báo cáo.
+
+BẢN SỬA KHỞI ĐỘNG
+Màn hình chờ và cấu hình dùng tài nguyên nội bộ, xử lý đường dẫn Windows khi mở app. Bản này chạy từ thư mục đầy đủ đã giải nén, thay cho tệp portable tự bung vào Temp.
+Không cần cài Node.js hoặc chạy npm để mở app.
+
+TÀI KHOẢN
+Lần đầu với CSDL chưa có tài khoản: thiết lập quản trị viên trên giao diện.
+Người dùng chọn Đăng ký trên màn hình đăng nhập để tạo tài khoản Hành khách.
+Nhà xe tạo chuyến có ngày đi từ ngày mai; hành khách vào Tìm chuyến để đăng ký chỗ và Chuyến đã đăng ký để xem/hủy.
+
+Mã nguồn và SQL nằm trong ma-nguon. Phạm vi đã kiểm thử được ghi tại ma-nguon/docs/TESTING.md.

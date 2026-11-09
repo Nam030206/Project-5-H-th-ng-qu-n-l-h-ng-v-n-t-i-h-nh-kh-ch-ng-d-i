@@ -1,0 +1,111 @@
+export const entityDefinitions = {
+  buses: {
+    title: "Xe khách",
+    singular: "xe khách",
+    description: "Theo dõi đội xe, thông số kỹ thuật và tình trạng bảo dưỡng.",
+    key: "BienSo",
+    path: "/xe-khach",
+    fields: [
+      ["BienSo", "text", 15],
+      ["MauXe", "text", 30],
+      ["HangSanXuat", "text", 50],
+      ["DoiXe", "text", 30],
+      ["Model", "text", 50],
+      ["SoGhe", "number", 32767, 2],
+      ["SoNamSuDung", "number", 32767, 0],
+      ["NgayBaoDuongCuoiCung", "date"],
+    ],
+    columns: [
+      "BienSo",
+      "HangSanXuat",
+      "Model",
+      "MauXe",
+      "DoiXe",
+      "SoGhe",
+      "SoChoNgoiQuyDinh",
+      "SoNamSuDung",
+      "NgayBaoDuongCuoiCung",
+      "NgayBaoDuongTiepTheo",
+    ],
+  },
+  drivers: {
+    title: "Tài xế",
+    singular: "tài xế",
+    description: "Quản lý hồ sơ nhân sự và lịch sử tham gia từng chuyến xe.",
+    key: "CMT",
+    path: "/tai-xe",
+    fields: [
+      ["CMT", "text", 12],
+      ["Ten", "text", 100],
+      ["MaSoBangLai", "text", 20],
+      ["LoaiBangLai", "text", 10],
+      ["DiaChi", "text", 255],
+      ["NgaySinh", "date"],
+      ["ThamNien", "number", 32767, 0],
+    ],
+    columns: [
+      "Ten",
+      "CMT",
+      "MaSoBangLai",
+      "LoaiBangLai",
+      "DiaChi",
+      "NgaySinh",
+      "ThamNien",
+      "LuongThangHienTai",
+    ],
+  },
+  routes: {
+    title: "Tuyến đường",
+    singular: "tuyến đường",
+    description: "Kết nối các điểm đến, quản lý độ dài và độ phức tạp tuyến.",
+    key: "MaTuyen",
+    path: "/tuyen-duong",
+    fields: [
+      ["MaTuyen", "text", 10],
+      ["DiemDau", "text", 100],
+      ["DiemCuoi", "text", 100],
+      ["DoDai", "number", 999999.99, 0.01, 0.01],
+      ["DoPhucTap", "difficulty"],
+    ],
+    columns: ["MaTuyen", "DiemDau", "DiemCuoi", "DoDai", "DoPhucTap"],
+  },
+  trips: {
+    title: "Chuyến xe",
+    singular: "chuyến xe",
+    description:
+      "Tổ chức hành trình, phân công nhân sự và quản lý thông tin chuyến.",
+    key: "MaSoChuyenXe",
+    path: "/chuyen-xe",
+    fields: [
+      ["MaSoChuyenXe", "text", 10],
+      ["NgayThucHien", "date"],
+      ["BienSo", "bus"],
+      ["MaTuyen", "route"],
+      ["CMTLaiXe", "driver"],
+      ["CMTPhuXe", "driver"],
+      ["SoKhach", "number", 32767, 0],
+      ["GiaVe", "number", 999999999999, 0],
+    ],
+    columns: [
+      "MaSoChuyenXe",
+      "NgayThucHien",
+      "BienSo",
+      "MaTuyen",
+      "TenLaiXe",
+      "TenPhuXe",
+      "SoKhach",
+      "GiaVe",
+      "DoanhThuChuyen",
+    ],
+  },
+};
+export function editableValues(entity, row) {
+  return Object.fromEntries(
+    entityDefinitions[entity].fields.map(([key, type]) => [
+      key,
+      row?.[key] ?? (type === "number" ? 0 : type === "difficulty" ? 1 : ""),
+    ]),
+  );
+}
+export const newTripId = () =>
+  `CX${Date.now().toString(36).slice(-7).toUpperCase()}`;

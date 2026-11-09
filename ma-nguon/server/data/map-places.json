@@ -1,0 +1,66 @@
+{
+  "source": "OpenStreetMap / Nominatim",
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "retrievedAt": "2026-11-08",
+  "precision": "Vị trí đại diện của địa danh (thành phố/tỉnh), không phải bến xe hoặc điểm đón cụ thể.",
+  "places": [
+    {
+      "name": "Hà Nội",
+      "lat": 21.0283334,
+      "lng": 105.854041,
+      "osmType": "relation",
+      "osmId": 1903516,
+      "displayName": "Hà Nội, Việt Nam"
+    },
+    {
+      "name": "Hải Phòng",
+      "lat": 20.8830967,
+      "lng": 106.6790381,
+      "osmType": "relation",
+      "osmId": 1902682,
+      "displayName": "Thành phố Hải Phòng, Việt Nam"
+    },
+    {
+      "name": "Nam Định",
+      "lat": 19.9952624,
+      "lng": 106.485807,
+      "osmType": "relation",
+      "osmId": 1901008,
+      "displayName": "Tỉnh Nam Định, Tỉnh Ninh Bình, Việt Nam"
+    },
+    {
+      "name": "Vinh",
+      "lat": 18.7358406,
+      "lng": 105.6906101,
+      "osmType": "relation",
+      "osmId": 7033300,
+      "displayName": "Thành phố Vinh, Tỉnh Nghệ An, 43212, Việt Nam"
+    },
+    {
+      "name": "Lào Cai",
+      "lat": 22.3069302,
+      "lng": 104.1829592,
+      "osmType": "relation",
+      "osmId": 1903400,
+      "displayName": "Tỉnh Lào Cai, Việt Nam"
+    },
+    {
+      "name": "Sơn La",
+      "lat": 21.2276769,
+      "lng": 104.1575944,
+      "osmType": "relation",
+      "osmId": 1903291,
+      "displayName": "Tỉnh Sơn La, Việt Nam"
+    },
+    {
+      "name": "Điện Biên",
+      "lat": 21.6546566,
+      "lng": 103.2168632,
+      "osmType": "relation",
+      "osmId": 1903340,
+      "displayName": "Tỉnh Điện Biên, Việt Nam"
+    }
+  ]
+}
