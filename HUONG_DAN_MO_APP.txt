@@ -1,7 +1,7 @@
 ﻿VẬN HÀNH 1.3.5 – SỬA TẦNG KẾT NỐI BẢN ĐỒ
 
 1. Thoát hoàn toàn app cũ.
-2. Giải nén toàn bộ ZIP vào thư mục mới.
+2. Giải nén toàn bộ ZIP vào thư mục mới. Riêng file VanHanh.exe phải tải riêng ghi đè lên file hiện đã tải về
 3. Mở VanHanh_Desktop/VanHanh.exe, giữ MySQL Server đang chạy.
 4. Vào Bản đồ tuyến, chọn tuyến và nhấn Tải bản đồ.
 5. Màn hình phải ghi Bản đồ 1.3.5.
