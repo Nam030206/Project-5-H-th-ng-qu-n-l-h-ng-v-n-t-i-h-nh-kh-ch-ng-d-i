@@ -1,4 +1,4 @@
-﻿VẬN HÀNH 1.3.5 – SỬA TẦNG KẾT NỐI BẢN ĐỒ
+﻿VẬN HÀNH 1.3.5 
 
 1. Thoát hoàn toàn app cũ.
 2. Giải nén toàn bộ ZIP vào thư mục mới. Riêng file VanHanh.exe phải tải riêng ghi đè lên file hiện đã tải về
