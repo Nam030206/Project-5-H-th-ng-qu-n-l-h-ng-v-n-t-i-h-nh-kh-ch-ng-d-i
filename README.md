@@ -1,0 +1,15 @@
+﻿VẬN HÀNH 1.3.5 – SỬA TẦNG KẾT NỐI BẢN ĐỒ
+
+1. Thoát hoàn toàn app cũ.
+2. Giải nén toàn bộ ZIP vào thư mục mới. Riêng file VanHanh.exe phải tải riêng ghi đè lên file hiện đã tải về
+3. Mở VanHanh_Desktop/VanHanh.exe, giữ MySQL Server đang chạy.
+4. Vào Bản đồ tuyến, chọn tuyến và nhấn Tải bản đồ.
+5. Màn hình phải ghi Bản đồ 1.3.5.
+
+Bản này lấy chính ảnh OpenStreetMap qua HTTPS của hệ điều hành.
+Không cần chạy lại SQL hoặc xóa CSDL. Không có nguồn bản đồ khác.
+Giữ resources, locales và DLL cạnh EXE. Không mở app trong ZIP.
+
+Nếu còn lỗi: chụp dòng Mã kết nối; nhấp đúp KIEM_TRA_BAN_DO.cmd
+và chụp kết quả. Công cụ không đọc thông tin MySQL/tài khoản/mật khẩu.
+Mã nguồn đầy đủ: ma-nguon. Chi tiết: SUA_LOI_BAN_DO.md.
