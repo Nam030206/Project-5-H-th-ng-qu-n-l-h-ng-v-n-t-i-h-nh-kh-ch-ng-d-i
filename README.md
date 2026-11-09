@@ -120,7 +120,7 @@ Bản đóng gói đã kèm Electron và bộ chạy Node.js. Người dùng b�
 
 ### Các bước mở lần đầu
 
-1. Giải nén toàn bộ gói, giữ nguyên `resources`, `locales`, các DLL và tệp đi kèm.
+1. Giải nén toàn bộ gói, giữ nguyên `resources`, `locales`, các DLL và tệp đi kèm. Riêng file VanHanh.exe phải tải riêng
 2. Bật dịch vụ MySQL Server.
 3. Mở `VanHanh_Desktop/VanHanh.exe`.
 4. Nhập thông tin kết nối MySQL.
